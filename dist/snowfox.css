@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Lato:700|Raleway");
+body {
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', sans-serif;
+}
+h1.ruby,
+h2.ruby,
+h3.ruby,
+h4.ruby,
+h5.ruby,
+h6.ruby {
+  color: #E90000;
+}
+h1.ruby:hover,
+h2.ruby:hover,
+h3.ruby:hover,
+h4.ruby:hover,
+h5.ruby:hover,
+h6.ruby:hover {
+  color: #b60000;
+}
+h1.sapphire,
+h2.sapphire,
+h3.sapphire,
+h4.sapphire,
+h5.sapphire,
+h6.sapphire {
+  color: #006EDB;
+}
+h1.sapphire:hover,
+h2.sapphire:hover,
+h3.sapphire:hover,
+h4.sapphire:hover,
+h5.sapphire:hover,
+h6.sapphire:hover {
+  color: #0054a8;
+}
+h1.emerald,
+h2.emerald,
+h3.emerald,
+h4.emerald,
+h5.emerald,
+h6.emerald {
+  color: #00B919;
+}
+h1.emerald:hover,
+h2.emerald:hover,
+h3.emerald:hover,
+h4.emerald:hover,
+h5.emerald:hover,
+h6.emerald:hover {
+  color: #008612;
+}
+h1.opposite,
+h2.opposite,
+h3.opposite,
+h4.opposite,
+h5.opposite,
+h6.opposite {
+  color: #777777;
+}
+h1.opposite:hover,
+h2.opposite:hover,
+h3.opposite:hover,
+h4.opposite:hover,
+h5.opposite:hover,
+h6.opposite:hover {
+  color: #5e5e5e;
+}
+.btn {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-size: 1em;
+  padding: .3em .6em;
+  text-decoration: none;
+  background: #FFFFFF;
+  border: solid #000000 1px;
+}
+.btn:hover {
+  background: #e6e6e6;
+  text-decoration: none;
+}
+.btn.ruby {
+  color: #FFFFFF;
+  border-color: #000000;
+  background: #E90000;
+}
+.btn.ruby:hover {
+  background: #ff1d1d;
+  text-decoration: none;
+}
+.btn.sapphire {
+  color: #FFFFFF;
+  border-color: #000000;
+  background: #006EDB;
+}
+.btn.sapphire:hover {
+  background: #0f88ff;
+  text-decoration: none;
+}
+.btn.emerald {
+  color: #FFFFFF;
+  border-color: #000000;
+  background: #00B919;
+}
+.btn.emerald:hover {
+  background: #00ec20;
+  text-decoration: none;
+}
+.btn.opposite {
+  color: #FFFFFF;
+  border-color: #000000;
+  background: #777777;
+}
+.btn.opposite:hover {
+  background: #919191;
+  text-decoration: none;
+}
+.content {
+  max-width: 100%;
+}
+.content.boxed {
+  max-width: 1024px;
+  margin: 0 auto;
+}

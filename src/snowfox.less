@@ -1,8 +1,79 @@
-<html>
-    <head>
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Lato:700|Raleway");
 
-    </head>
-    <body>
+@black:             #000000;
+@white:             #FFFFFF;
 
-    </body>
-</html>
+@ruby:              #E90000;
+@sapphire:          #006EDB;
+@emerald:           #00B919;
+@opposite:          #777777;
+@theme-colors:      ruby @ruby, sapphire @sapphire, emerald @emerald, opposite @opposite;
+
+@font-intense:      'Lato', sans-serif;
+@font-discreet:     'Raleway', sans-serif;
+@font-flat:         'Cutive Mono', monospace;
+
+body {
+    font-family: @font-discreet;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @font-intense;
+
+    .for-each(@theme in @theme-colors) {
+        @key:       at(@theme, 1);
+        @value:     at(@theme, 2);
+    
+        &.@{key} {
+            color: @value;
+
+            &:hover {
+                color: darken(@value, 10%);
+            }
+        }
+    }
+}
+
+.btn {
+    -webkit-border-radius: 0px;
+       -moz-border-radius: 0px;
+            border-radius: 0px;
+
+    font-size: 1em;
+    padding: .3em .6em;
+    text-decoration: none;
+    background: @white;
+    border: solid @black 1px;
+
+    &:hover {
+        background: darken(@white, 10%);
+        text-decoration: none;
+    }
+    
+    .for-each(@theme in @theme-colors) {
+        @key:       at(@theme, 1);
+        @value:     at(@theme, 2);
+    
+        &.@{key} {
+            color: @white;
+            border-color: darken(@value, 50%);
+            background: @value;
+
+            &:hover {
+                background: lighten(@value, 10%);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.content {
+    max-width: 100%;
+
+    &.boxed {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
+
