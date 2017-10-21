@@ -132,3 +132,19 @@ h6.opposite:hover {
   max-width: 1024px;
   margin: 0 auto;
 }
+table {
+  border-spacing: 0;
+}
+table td {
+  padding: 2px 4px;
+}
+table thead {
+  font-weight: bold;
+  background-color: #DFDFDF;
+}
+table tbody {
+  background-color: #FFFFFF;
+}
+table tbody tr:nth-child(even) {
+  background-color: #EFEFEF;
+}

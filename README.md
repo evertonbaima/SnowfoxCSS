@@ -11,7 +11,7 @@ Framework CSS desenvolvido para fins acadêmicos.
   - [ ] Mobile – máx 1 coluna;
 - [X] Deve possuir opção de layout com box ou sem;
 - [ ] Deve fazer que as imagens e videos sejam fluidas;
-- [ ] Tabelas devem ser sem bordas;
+- [X] Tabelas devem ser sem bordas;
 - [X] Deve fornecer ao menos 2 opções de paletas de cores padrão;
 - [X] Deve possuir uma tipografia básica com ao menos 3 fontes do Google Fonts;
 - [X] Deve ter uma tipografias paras as tags `<h1>` até `<h6>`;
