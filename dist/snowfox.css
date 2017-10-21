@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Lato:700|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Lato|Raleway");
 body {
   font-family: 'Raleway', sans-serif;
   box-sizing: border-box;
@@ -75,6 +75,12 @@ h5.opposite:hover,
 h6.opposite:hover {
   color: #5e5e5e;
 }
+.inner-expanded {
+  padding: 4px 8px;
+}
+.outer-expanded {
+  margin: 4px 8px;
+}
 .btn {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -147,4 +153,33 @@ table tbody {
 }
 table tbody tr:nth-child(even) {
   background-color: #EFEFEF;
+}
+.menu {
+  font-family: 'Lato', sans-serif;
+}
+.menu.fill {
+  width: 100%;
+}
+.menu ul {
+  padding-left: 0px;
+}
+.menu ul li {
+  list-style: none;
+  padding: 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.menu ul li:hover {
+  background-color: #F0F0F0;
+}
+.menu.inline ul li {
+  display: inline;
+  margin: 2px;
+}
+.menu.inline ul li:first-child {
+  margin-left: 0;
+}
+.menu.inline ul li:last-child {
+  margin-right: 0;
 }

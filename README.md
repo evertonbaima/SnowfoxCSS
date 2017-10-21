@@ -15,6 +15,6 @@ Framework CSS desenvolvido para fins acadêmicos.
 - [X] Deve fornecer ao menos 2 opções de paletas de cores padrão;
 - [X] Deve possuir uma tipografia básica com ao menos 3 fontes do Google Fonts;
 - [X] Deve ter uma tipografias paras as tags `<h1>` até `<h6>`;
-- [ ] Deve permitir utilizar menu horizontais;
+- [X] Deve permitir utilizar menu horizontais;
 - [X] Deve ser disponibilizado no github;
 - [X] Deve ser apresentado um conteúdo web de prova de conceito.
