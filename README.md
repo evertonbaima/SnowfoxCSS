@@ -4,11 +4,11 @@ Framework CSS desenvolvido para fins acadêmicos.
 ## Requisitos
 
 - [X] Deve ter um nome;
-- [ ] Tem que possuir breakpoints para 3 tamanhos específicos: desktop, tablet, mobile;
-- [ ] Que seja possível criar layout de grid até 4 colunas;
-  - [ ] Desktop – até 8 colunas;
-  - [ ] Tablet – máx 4 colunas;
-  - [ ] Mobile – máx 1 coluna;
+- [X] Tem que possuir breakpoints para 3 tamanhos específicos: desktop, tablet, mobile;
+- [X] Que seja possível criar layout de grid até 4 colunas;
+  - [X] Desktop – até 8 colunas;
+  - [X] Tablet – máx 4 colunas;
+  - [X] Mobile – máx 1 coluna;
 - [X] Deve possuir opção de layout com box ou sem;
 - [ ] Deve fazer que as imagens e videos sejam fluidas;
 - [X] Tabelas devem ser sem bordas;

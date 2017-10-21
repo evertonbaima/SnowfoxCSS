@@ -15,7 +15,10 @@
 
 body {
     font-family: @font-discreet;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box !important;
+       -moz-box-sizing: border-box !important;
+        -ms-box-sizing: border-box !important;
+            box-sizing: border-box !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -133,12 +136,55 @@ table {
         display: inline;
         margin: 2px;
 
-
         &:first-child {
             margin-left: 0;
         }
 
         &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
+@media (max-width: 420px) {
+    .for(@i, 8) {
+        .pillar-@{i} {
+            float: left;
+            width: @i * 100% / 1;
+        }
+    }
+}
+
+@media (min-width: 421px) and (max-width: 840px) {
+    .for(@i, 8) {
+        .pillar-@{i} {
+            float: left;
+            width: @i * 100% / 4;
+        }
+    }
+}
+
+@media (min-width: 841px) {
+    .for(@i, 8) {
+        .pillar-@{i} {
+            float: left;
+            width: @i * 100% / 8;
+        }
+    }
+}
+
+.for(@i, 8) {
+    .pillar-@{i} {
+        > * {
+            margin: 4px 8px;
+        }
+    
+        &:first-child > * {
+            margin-left: 0;
+        }
+    
+        &:last-child > * {
             margin-right: 0;
         }
     }
