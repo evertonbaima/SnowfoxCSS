@@ -13,7 +13,7 @@
 @font-discreet:     'Raleway', sans-serif;
 @font-flat:         'Cutive Mono', monospace;
 
-body {
+* {
     font-family: @font-discreet;
     -webkit-box-sizing: border-box !important;
        -moz-box-sizing: border-box !important;
@@ -23,19 +23,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: @font-intense;
+    flex-basis: -webkit-available;
+    flex-basis:    -moz-available;
+    flex-basis:         available;
+}
 
-    .for-each(@theme in @theme-colors) {
-        @key:       at(@theme, 1);
-        @value:     at(@theme, 2);
-    
-        &.@{key} {
-            color: @value;
-
-            &:hover {
-                color: darken(@value, 10%);
-            }
-        }
-    }
+img.responsive {
+    max-width: -webkit-max-content;
+    max-width:    -moz-max-content;
+    max-width:         max-content;
+    width: 100%;
+    height: auto;
 }
 
 .inner-expanded {
@@ -54,36 +52,58 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
     padding: .3em .6em;
     text-decoration: none;
-    background: @white;
+    background-color: darken(@white, 5%);
     border: solid @black 1px;
 
+    &.round {
+        border-radius: 1000px;
+    }
+
+    &.empty {
+        background-color: @white;
+
+        &:hover {
+            color: @black;
+        }
+        
+        &:active {
+            background-color: lighten(@white, 50%);
+            color: lighten(@black, 10%);
+        }
+    }
+
+    &.link {
+        background-color: @white;
+        border: none;
+
+        &:hover {
+            background-color: @white;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &:active {
+            color: lighten(@black, 50%);
+        }
+    }
+
     &:hover {
-        background: darken(@white, 10%);
+        background-color: darken(@white, 10%);
         text-decoration: none;
     }
-    
-    .for-each(@theme in @theme-colors) {
-        @key:       at(@theme, 1);
-        @value:     at(@theme, 2);
-    
-        &.@{key} {
-            color: @white;
-            border-color: darken(@value, 50%);
-            background: @value;
 
-            &:hover {
-                background: lighten(@value, 10%);
-                text-decoration: none;
-            }
-        }
+    &:active {
+        background-color: lighten(@black, 70%);
     }
 }
 
 .content {
     max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
     &.boxed {
-        max-width: 1024px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 }
@@ -122,19 +142,18 @@ table {
         li {
             list-style: none;
             padding: 4px;
-            width: -webkit-max-content;
-            width:    -moz-max-content;
-            width:         max-content;        
-
+            
             &:hover {
-                background-color: #F0F0F0;
+                background-color: darken(@white, 10%);
             }
         }
     }
 
     &.inline ul li {
-        display: inline;
-        margin: 2px;
+        display: inline-flex;
+        width: -webkit-max-content;
+        width:    -moz-max-content;
+        width:         max-content;        
 
         &:first-child {
             margin-left: 0;
@@ -146,21 +165,29 @@ table {
     }
 }
 
+.for(@i, 8) {
+    .pillar-@{i} {
+        float: left;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 4px 8px;
+    }
+}
 
 @media (max-width: 420px) {
-    .for(@i, 8) {
+    .for(@i, 1) {
         .pillar-@{i} {
-            float: left;
-            width: @i * 100% / 1;
+            max-width: @i * 100% / 1;
+            min-width: @i * 100% / 1;
         }
     }
 }
 
 @media (min-width: 421px) and (max-width: 840px) {
-    .for(@i, 8) {
+    .for(@i, 4) {
         .pillar-@{i} {
-            float: left;
-            width: @i * 100% / 4;
+            max-width: @i * 100% / 4;
+            min-width: @i * 100% / 4;
         }
     }
 }
@@ -168,24 +195,93 @@ table {
 @media (min-width: 841px) {
     .for(@i, 8) {
         .pillar-@{i} {
-            float: left;
-            width: @i * 100% / 8;
+            max-width: @i * 100% / 8;
+            min-width: @i * 100% / 8;
         }
     }
 }
 
-.for(@i, 8) {
-    .pillar-@{i} {
-        > * {
-            margin: 4px 8px;
+.for-each(@theme in @theme-colors) {
+    @key:       at(@theme, 1);
+    @value:     at(@theme, 2);
+
+    body&.@{key} {
+        h1, h2, h3, h4, h5, h6 {
+            color: @value;
+            
+            &:hover {
+                color: darken(@value, 10%);
+            }
         }
-    
-        &:first-child > * {
-            margin-left: 0;
+
+        .btn {
+            color: @white;
+            background-color: lighten(@value, 5%);
+            border: solid @value 1px;
+        
+            &.empty {
+                color: @value;
+                background-color: @white;
+
+                &:hover {
+                    color: @white;
+                }
+                
+                &:active {
+                    background-color: lighten(@value, 50%);
+                    color: darken(@value, 50%);
+                }
+            }
+        
+            &.link {
+                border: none;
+                color: @value;
+                background-color: @white;
+        
+                &:hover {
+                    color: @value;
+                    background-color: @white;
+                }
+
+                &:active {
+                    color: darken(@value, 50%);
+                }
+            }
+        
+            &:hover {
+                background-color: @value;
+            }
+
+            &:active {
+                background-color: darken(@value, 10%);
+            }
         }
-    
-        &:last-child > * {
-            margin-right: 0;
+
+        table {
+            thead {
+                color: @white;
+                background-color: darken(@value, 20%);
+            }
+        
+            tbody {
+                tr:nth-child(even) {
+                    background-color: fade(@value, 20%);
+                }
+            }
+        }
+
+        .menu {
+            color: @white;
+            background-color: darken(@value, 15%);
+
+            ul {
+                li {
+                    &:hover {
+                        color: @white;
+                        background-color: darken(@value, 1%);
+                    }
+                }
+            }
         }
     }
 }

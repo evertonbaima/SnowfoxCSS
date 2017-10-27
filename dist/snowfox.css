@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cutive+Mono|Lato|Raleway");
-body {
+* {
   font-family: 'Raleway', sans-serif;
   -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
@@ -13,70 +13,16 @@ h4,
 h5,
 h6 {
   font-family: 'Lato', sans-serif;
+  flex-basis: -webkit-available;
+  flex-basis: -moz-available;
+  flex-basis: available;
 }
-h1.ruby,
-h2.ruby,
-h3.ruby,
-h4.ruby,
-h5.ruby,
-h6.ruby {
-  color: #E90000;
-}
-h1.ruby:hover,
-h2.ruby:hover,
-h3.ruby:hover,
-h4.ruby:hover,
-h5.ruby:hover,
-h6.ruby:hover {
-  color: #b60000;
-}
-h1.sapphire,
-h2.sapphire,
-h3.sapphire,
-h4.sapphire,
-h5.sapphire,
-h6.sapphire {
-  color: #006EDB;
-}
-h1.sapphire:hover,
-h2.sapphire:hover,
-h3.sapphire:hover,
-h4.sapphire:hover,
-h5.sapphire:hover,
-h6.sapphire:hover {
-  color: #0054a8;
-}
-h1.emerald,
-h2.emerald,
-h3.emerald,
-h4.emerald,
-h5.emerald,
-h6.emerald {
-  color: #00B919;
-}
-h1.emerald:hover,
-h2.emerald:hover,
-h3.emerald:hover,
-h4.emerald:hover,
-h5.emerald:hover,
-h6.emerald:hover {
-  color: #008612;
-}
-h1.opposite,
-h2.opposite,
-h3.opposite,
-h4.opposite,
-h5.opposite,
-h6.opposite {
-  color: #777777;
-}
-h1.opposite:hover,
-h2.opposite:hover,
-h3.opposite:hover,
-h4.opposite:hover,
-h5.opposite:hover,
-h6.opposite:hover {
-  color: #5e5e5e;
+img.responsive {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  width: 100%;
+  height: auto;
 }
 .inner-expanded {
   padding: 4px 8px;
@@ -91,54 +37,48 @@ h6.opposite:hover {
   font-size: 1em;
   padding: .3em .6em;
   text-decoration: none;
-  background: #FFFFFF;
+  background-color: #f2f2f2;
   border: solid #000000 1px;
 }
+.btn.round {
+  border-radius: 1000px;
+}
+.btn.empty {
+  background-color: #FFFFFF;
+}
+.btn.empty:hover {
+  color: #000000;
+}
+.btn.empty:active {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+.btn.link {
+  background-color: #FFFFFF;
+  border: none;
+}
+.btn.link:hover {
+  background-color: #FFFFFF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.btn.link:active {
+  color: #808080;
+}
 .btn:hover {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
   text-decoration: none;
 }
-.btn.ruby {
-  color: #FFFFFF;
-  border-color: #000000;
-  background: #E90000;
-}
-.btn.ruby:hover {
-  background: #ff1d1d;
-  text-decoration: none;
-}
-.btn.sapphire {
-  color: #FFFFFF;
-  border-color: #000000;
-  background: #006EDB;
-}
-.btn.sapphire:hover {
-  background: #0f88ff;
-  text-decoration: none;
-}
-.btn.emerald {
-  color: #FFFFFF;
-  border-color: #000000;
-  background: #00B919;
-}
-.btn.emerald:hover {
-  background: #00ec20;
-  text-decoration: none;
-}
-.btn.opposite {
-  color: #FFFFFF;
-  border-color: #000000;
-  background: #777777;
-}
-.btn.opposite:hover {
-  background: #919191;
-  text-decoration: none;
+.btn:active {
+  background-color: #b3b3b3;
 }
 .content {
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .content.boxed {
-  max-width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 table {
@@ -169,16 +109,15 @@ table tbody tr:nth-child(even) {
 .menu ul li {
   list-style: none;
   padding: 4px;
+}
+.menu ul li:hover {
+  background-color: #e6e6e6;
+}
+.menu.inline ul li {
+  display: inline-flex;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-.menu ul li:hover {
-  background-color: #F0F0F0;
-}
-.menu.inline ul li {
-  display: inline;
-  margin: 2px;
 }
 .menu.inline ul li:first-child {
   margin-left: 0;
@@ -186,177 +125,369 @@ table tbody tr:nth-child(even) {
 .menu.inline ul li:last-child {
   margin-right: 0;
 }
+.pillar-1 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-2 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-3 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-4 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-5 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-6 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-7 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
+.pillar-8 {
+  float: left;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 4px 8px;
+}
 @media (max-width: 420px) {
   .pillar-1 {
-    float: left;
-    width: 100%;
-  }
-  .pillar-2 {
-    float: left;
-    width: 200%;
-  }
-  .pillar-3 {
-    float: left;
-    width: 300%;
-  }
-  .pillar-4 {
-    float: left;
-    width: 400%;
-  }
-  .pillar-5 {
-    float: left;
-    width: 500%;
-  }
-  .pillar-6 {
-    float: left;
-    width: 600%;
-  }
-  .pillar-7 {
-    float: left;
-    width: 700%;
-  }
-  .pillar-8 {
-    float: left;
-    width: 800%;
+    max-width: 100%;
+    min-width: 100%;
   }
 }
 @media (min-width: 421px) and (max-width: 840px) {
   .pillar-1 {
-    float: left;
-    width: 25%;
+    max-width: 25%;
+    min-width: 25%;
   }
   .pillar-2 {
-    float: left;
-    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
   }
   .pillar-3 {
-    float: left;
-    width: 75%;
+    max-width: 75%;
+    min-width: 75%;
   }
   .pillar-4 {
-    float: left;
-    width: 100%;
-  }
-  .pillar-5 {
-    float: left;
-    width: 125%;
-  }
-  .pillar-6 {
-    float: left;
-    width: 150%;
-  }
-  .pillar-7 {
-    float: left;
-    width: 175%;
-  }
-  .pillar-8 {
-    float: left;
-    width: 200%;
+    max-width: 100%;
+    min-width: 100%;
   }
 }
 @media (min-width: 841px) {
   .pillar-1 {
-    float: left;
-    width: 12.5%;
+    max-width: 12.5%;
+    min-width: 12.5%;
   }
   .pillar-2 {
-    float: left;
-    width: 25%;
+    max-width: 25%;
+    min-width: 25%;
   }
   .pillar-3 {
-    float: left;
-    width: 37.5%;
+    max-width: 37.5%;
+    min-width: 37.5%;
   }
   .pillar-4 {
-    float: left;
-    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
   }
   .pillar-5 {
-    float: left;
-    width: 62.5%;
+    max-width: 62.5%;
+    min-width: 62.5%;
   }
   .pillar-6 {
-    float: left;
-    width: 75%;
+    max-width: 75%;
+    min-width: 75%;
   }
   .pillar-7 {
-    float: left;
-    width: 87.5%;
+    max-width: 87.5%;
+    min-width: 87.5%;
   }
   .pillar-8 {
-    float: left;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
   }
 }
-.pillar-1 > * {
-  margin: 4px 8px;
+body.ruby h1,
+body.ruby h2,
+body.ruby h3,
+body.ruby h4,
+body.ruby h5,
+body.ruby h6 {
+  color: #E90000;
 }
-.pillar-1:first-child > * {
-  margin-left: 0;
+body.ruby h1:hover,
+body.ruby h2:hover,
+body.ruby h3:hover,
+body.ruby h4:hover,
+body.ruby h5:hover,
+body.ruby h6:hover {
+  color: #b60000;
 }
-.pillar-1:last-child > * {
-  margin-right: 0;
+body.ruby .btn {
+  color: #FFFFFF;
+  background-color: #ff0303;
+  border: solid #E90000 1px;
 }
-.pillar-2 > * {
-  margin: 4px 8px;
+body.ruby .btn.empty {
+  color: #E90000;
+  background-color: #FFFFFF;
 }
-.pillar-2:first-child > * {
-  margin-left: 0;
+body.ruby .btn.empty:hover {
+  color: #FFFFFF;
 }
-.pillar-2:last-child > * {
-  margin-right: 0;
+body.ruby .btn.empty:active {
+  background-color: #ffe9e9;
+  color: #000000;
 }
-.pillar-3 > * {
-  margin: 4px 8px;
+body.ruby .btn.link {
+  border: none;
+  color: #E90000;
+  background-color: #FFFFFF;
 }
-.pillar-3:first-child > * {
-  margin-left: 0;
+body.ruby .btn.link:hover {
+  color: #E90000;
+  background-color: #FFFFFF;
 }
-.pillar-3:last-child > * {
-  margin-right: 0;
+body.ruby .btn.link:active {
+  color: #000000;
 }
-.pillar-4 > * {
-  margin: 4px 8px;
+body.ruby .btn:hover {
+  background-color: #E90000;
 }
-.pillar-4:first-child > * {
-  margin-left: 0;
+body.ruby .btn:active {
+  background-color: #b60000;
 }
-.pillar-4:last-child > * {
-  margin-right: 0;
+body.ruby table thead {
+  color: #FFFFFF;
+  background-color: #830000;
 }
-.pillar-5 > * {
-  margin: 4px 8px;
+body.ruby table tbody tr:nth-child(even) {
+  background-color: rgba(233, 0, 0, 0.2);
 }
-.pillar-5:first-child > * {
-  margin-left: 0;
+body.ruby .menu {
+  color: #FFFFFF;
+  background-color: #9d0000;
 }
-.pillar-5:last-child > * {
-  margin-right: 0;
+body.ruby .menu ul li:hover {
+  color: #FFFFFF;
+  background-color: #e40000;
 }
-.pillar-6 > * {
-  margin: 4px 8px;
+body.sapphire h1,
+body.sapphire h2,
+body.sapphire h3,
+body.sapphire h4,
+body.sapphire h5,
+body.sapphire h6 {
+  color: #006EDB;
 }
-.pillar-6:first-child > * {
-  margin-left: 0;
+body.sapphire h1:hover,
+body.sapphire h2:hover,
+body.sapphire h3:hover,
+body.sapphire h4:hover,
+body.sapphire h5:hover,
+body.sapphire h6:hover {
+  color: #0054a8;
 }
-.pillar-6:last-child > * {
-  margin-right: 0;
+body.sapphire .btn {
+  color: #FFFFFF;
+  background-color: #007bf4;
+  border: solid #006EDB 1px;
 }
-.pillar-7 > * {
-  margin: 4px 8px;
+body.sapphire .btn.empty {
+  color: #006EDB;
+  background-color: #FFFFFF;
 }
-.pillar-7:first-child > * {
-  margin-left: 0;
+body.sapphire .btn.empty:hover {
+  color: #FFFFFF;
 }
-.pillar-7:last-child > * {
-  margin-right: 0;
+body.sapphire .btn.empty:active {
+  background-color: #dbedff;
+  color: #000000;
 }
-.pillar-8 > * {
-  margin: 4px 8px;
+body.sapphire .btn.link {
+  border: none;
+  color: #006EDB;
+  background-color: #FFFFFF;
 }
-.pillar-8:first-child > * {
-  margin-left: 0;
+body.sapphire .btn.link:hover {
+  color: #006EDB;
+  background-color: #FFFFFF;
 }
-.pillar-8:last-child > * {
-  margin-right: 0;
+body.sapphire .btn.link:active {
+  color: #000000;
+}
+body.sapphire .btn:hover {
+  background-color: #006EDB;
+}
+body.sapphire .btn:active {
+  background-color: #0054a8;
+}
+body.sapphire table thead {
+  color: #FFFFFF;
+  background-color: #003b75;
+}
+body.sapphire table tbody tr:nth-child(even) {
+  background-color: rgba(0, 110, 219, 0.2);
+}
+body.sapphire .menu {
+  color: #FFFFFF;
+  background-color: #00488f;
+}
+body.sapphire .menu ul li:hover {
+  color: #FFFFFF;
+  background-color: #006bd6;
+}
+body.emerald h1,
+body.emerald h2,
+body.emerald h3,
+body.emerald h4,
+body.emerald h5,
+body.emerald h6 {
+  color: #00B919;
+}
+body.emerald h1:hover,
+body.emerald h2:hover,
+body.emerald h3:hover,
+body.emerald h4:hover,
+body.emerald h5:hover,
+body.emerald h6:hover {
+  color: #008612;
+}
+body.emerald .btn {
+  color: #FFFFFF;
+  background-color: #00d31c;
+  border: solid #00B919 1px;
+}
+body.emerald .btn.empty {
+  color: #00B919;
+  background-color: #FFFFFF;
+}
+body.emerald .btn.empty:hover {
+  color: #FFFFFF;
+}
+body.emerald .btn.empty:active {
+  background-color: #b9ffc2;
+  color: #000000;
+}
+body.emerald .btn.link {
+  border: none;
+  color: #00B919;
+  background-color: #FFFFFF;
+}
+body.emerald .btn.link:hover {
+  color: #00B919;
+  background-color: #FFFFFF;
+}
+body.emerald .btn.link:active {
+  color: #000000;
+}
+body.emerald .btn:hover {
+  background-color: #00B919;
+}
+body.emerald .btn:active {
+  background-color: #008612;
+}
+body.emerald table thead {
+  color: #FFFFFF;
+  background-color: #00530b;
+}
+body.emerald table tbody tr:nth-child(even) {
+  background-color: rgba(0, 185, 25, 0.2);
+}
+body.emerald .menu {
+  color: #FFFFFF;
+  background-color: #006d0f;
+}
+body.emerald .menu ul li:hover {
+  color: #FFFFFF;
+  background-color: #00b418;
+}
+body.opposite h1,
+body.opposite h2,
+body.opposite h3,
+body.opposite h4,
+body.opposite h5,
+body.opposite h6 {
+  color: #777777;
+}
+body.opposite h1:hover,
+body.opposite h2:hover,
+body.opposite h3:hover,
+body.opposite h4:hover,
+body.opposite h5:hover,
+body.opposite h6:hover {
+  color: #5e5e5e;
+}
+body.opposite .btn {
+  color: #FFFFFF;
+  background-color: #848484;
+  border: solid #777777 1px;
+}
+body.opposite .btn.empty {
+  color: #777777;
+  background-color: #FFFFFF;
+}
+body.opposite .btn.empty:hover {
+  color: #FFFFFF;
+}
+body.opposite .btn.empty:active {
+  background-color: #f7f7f7;
+  color: #000000;
+}
+body.opposite .btn.link {
+  border: none;
+  color: #777777;
+  background-color: #FFFFFF;
+}
+body.opposite .btn.link:hover {
+  color: #777777;
+  background-color: #FFFFFF;
+}
+body.opposite .btn.link:active {
+  color: #000000;
+}
+body.opposite .btn:hover {
+  background-color: #777777;
+}
+body.opposite .btn:active {
+  background-color: #5e5e5e;
+}
+body.opposite table thead {
+  color: #FFFFFF;
+  background-color: #444444;
+}
+body.opposite table tbody tr:nth-child(even) {
+  background-color: rgba(119, 119, 119, 0.2);
+}
+body.opposite .menu {
+  color: #FFFFFF;
+  background-color: #515151;
+}
+body.opposite .menu ul li:hover {
+  color: #FFFFFF;
+  background-color: #747474;
 }
